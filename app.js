@@ -6,15 +6,23 @@ const album1 = {
       formats: ['LP']
     }
   };
+
+  
   
   // Exercise 1:  Update the title property of album1 from 'Talking Heads' to 'Talking Heads - 77', then assign that property to a variable named title
   
+  let title 
   
-  
+  album1.title = 'Talking Heads - 77';
+
+  title = album1.title
   
   // Exercise 2: Assign the string 'Sire' from album1 to a variable named label
   
-  
+  const label = {
+    title: 'Sire',
+  }
+
   
   
   const album2 = {
@@ -39,10 +47,14 @@ const album1 = {
   
   
   
+  album3.albumDetails.formats.push(album2.albumDetails.formats [0])
+
+  
   
   // Exercise 4:  Update the released property of album3 from a string into a Date object using that string
   
-  
+  album3.albumDetails.released = new Date(album3.albumDetails.released);
+
   
   
   const album4 = {
@@ -55,7 +67,8 @@ const album1 = {
   
   // Exercise 5:  Add a property named label with the value 'Sire' to album4's albumDetails property
   
-  
+  album4.albumDetails.label = 'Sire'
+
   
   
   const album5 = {
@@ -69,7 +82,8 @@ const album1 = {
   
   // Exercise 6:  Update the value 'emi' within album5's labels array to 'EMI'
   
-  
+  album5.albumDetails.labels = ['Sire', 'EMI']
+
   
   
   const album6 = {
@@ -83,7 +97,10 @@ const album1 = {
   
   // Exercise 7:  Assign album6's formats array to a variable named formats
   
-  
+  const formats = {
+    formats: ['CD', 'cassette', 'LP']
+  }
+
   
   
   const album7 = {
@@ -107,11 +124,14 @@ const album1 = {
   
   // Exercise 8:  Using the talkingHeadsAlbums array, assign album5's labels property to a variable named labels
   
-  
+  const labels = talkingHeadsAlbums[4].albumDetails.labels
+
   
   
   // Exercise 9:  Using the talkingHeadsAlbums array, assign album7's released property to album6's released property
   
+  talkingHeadsAlbums[5].albumDetails.released= talkingHeadsAlbums[6].albumDetails.released
+
   
   
   
@@ -119,7 +139,7 @@ const album1 = {
   
   let albumIdx = 4;
   
-  
+  const albumDetails = talkingHeadsAlbums[albumIdx].albumDetails
   
   
   /********** Don't look below here **********/
